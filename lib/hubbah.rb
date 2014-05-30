@@ -26,6 +26,7 @@ module Hubbah
     end
   end
 
-  class HubIdNotConfigured < Exception; end
-  class ServerErrorEncountered < Exception; end
+  class Error < Exception; end
+  class HubIdNotConfigured < Error; end
+  class ServerErrorEncountered < Error; end
 end
