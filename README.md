@@ -1,16 +1,18 @@
 # Hubbah
 
+Hubbah makes it easy to submit hubspot form data.
+
 ```ruby
 #in an initializer
 config.middleware.use Hubba::Middleware do |app|
-  app.hub_id = '312425'
+  app.hub_id = 'xxxxxx'
 end
 
 #in your controller, when you want to submit the form payload:
 env['hubbah'].submit(form_guid, params[:subscriber])
 ```
 
-TODO: Write a gem description
+Hubbah will send the relevant `hs_context` metadata (ip address, tracking cookie, and referrer) along with the data you pass to the `submit` invocation. The `form_guid` should correlate with the form you've configured in hubspot.
 
 ## Installation
 
