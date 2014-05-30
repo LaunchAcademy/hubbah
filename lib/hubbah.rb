@@ -1,6 +1,8 @@
 require 'hubbah/version'
 require 'hubbah/configuration'
+require 'hubbah/model'
 require 'hubbah/form_submission'
+require 'hubbah/contact'
 
 require 'hubbah/middleware'
 require 'hubbah/payload'
@@ -29,4 +31,5 @@ module Hubbah
   class Error < Exception; end
   class HubIdNotConfigured < Error; end
   class ServerErrorEncountered < Error; end
+  class AccessDenied < Error; end
 end

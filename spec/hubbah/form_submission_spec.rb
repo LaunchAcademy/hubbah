@@ -33,6 +33,7 @@ describe Hubbah::FormSubmission, vcr: true do
 
     submission.stubs(:client).returns(mock_client)
   end
+
   def form_guid
     ENV['HUBBAH_FORM_GUID']
   end
