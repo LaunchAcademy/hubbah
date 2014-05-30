@@ -2,6 +2,9 @@ require 'hubbah/version'
 require 'hubbah/configuration'
 require 'hubbah/form_submission'
 
+require 'hubbah/middleware'
+require 'hubbah/payload'
+
 module Hubbah
   class << self
     attr_accessor :configuration

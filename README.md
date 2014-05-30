@@ -1,5 +1,15 @@
 # Hubbah
 
+```ruby
+#in an initializer
+config.middleware.use Hubba::Middleware do |app|
+  app.hub_id = '312425'
+end
+
+#in your controller, when you want to submit the form payload:
+env['hubbah'].submit(form_guid, params[:subscriber])
+```
+
 TODO: Write a gem description
 
 ## Installation

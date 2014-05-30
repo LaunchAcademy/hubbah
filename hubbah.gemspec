@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Hubbah::VERSION
   spec.authors       = ["Dan Pickett"]
   spec.email         = ["dan.pickett@launchware.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Make hubspot form submissions a snap}
+  spec.description   = %q{Provides a web wrapper and rack middleware for hubspot form submissions}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,11 +19,14 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "faraday"
+  spec.add_dependency "rack"
+  spec.add_dependency "json"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "mocha"
+  spec.add_development_dependency "rack-test"
 
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-rspec"
@@ -32,4 +35,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "webmock"
   spec.add_development_dependency "vcr"
+  spec.add_development_dependency "pry"
 end

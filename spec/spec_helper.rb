@@ -3,6 +3,7 @@ require 'mocha/api'
 require 'hubbah'
 
 require 'dotenv'
+require 'pry'
 Dotenv.load
 
 Hubbah.configure do |config|

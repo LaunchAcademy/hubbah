@@ -2,9 +2,10 @@ require 'faraday'
 
 module Hubbah
   class FormSubmission
-    def initialize(form_guid, attributes = {})
+    def initialize(form_guid, attributes = {}, configuration = nil)
       @form_guid = form_guid
-      @attributes= attributes
+      @attributes = attributes
+      @configuration = configuration
     end
 
     def submit
@@ -26,7 +27,11 @@ module Hubbah
     end
 
     def hub_id
-      Hubbah.hub_id
+      configuration.hub_id
+    end
+
+    def configuration
+      @configuration || Hubbah.configuration
     end
   end
 end
